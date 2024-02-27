@@ -1,4 +1,4 @@
-# cse210-ww-student-template
+# cse210-projects
 Gabriel
 Class: CSE 210.
 
