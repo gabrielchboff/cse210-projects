@@ -1,0 +1,16 @@
+Abstraction is a concept that involves simplifying complex concepts by breaking them down into manageable and understandable parts. This methodology reduces the complexity and enhance understanding.One key advantage of abstraction is that it 
+allows consumers to interact with products without needing to understand their internal workings. 
+This simplification enables more sophisticated and user-friendly interactions with computers and applications
+. By using abstraction, designers can create systems that are more modular, easier to maintain, and more flexible, and
+even more generic. This benefit extends to various fields, from software engineering to digital design, 
+where abstraction serves as a powerful tool for unlocking the full potential of complex systems. Using
+Abstraction we reproduces the fuctionality how works the things in the real life inserting the concept in the
+computer world facilitating the understandig to any human. Beacause It is possible to create many libraries and
+dependencies to use in various projects. This concept is used to integrate system, build APIs and Desktop applications.
+For example of abstraction, in the Jounal Project I create a class called Journal, after the abstraction I realize that
+a Journal is made of pages, in other words a collection of entries, to maximize the abstraction I created a class called
+Entry with all attributes related with the entry, after I created a list of entries, This maximize the understanding of
+the Journal class. 
+In summary, abstraction is a crucial concept that simplifies complex systems. It allows developers to focus on 
+functionality without being burdened by intricate implementation details, and it promotes modularity, 
+code reusability, and efficient development.
