@@ -1,0 +1,97 @@
+Encapsulation is a concept related to Object Oriented Programming that consists of grouping class
+functionalities (methods and attributes) can not be accessed by another class, except for the class itself.
+To access these close attributes getters and setters are the the concept to get and set data to attributes. The class will be similar to a capsule
+or wrapper where the attributes and methods are encapsulated but can be accessed by specific methods to provide more safety.
+The purpose of encapsulation is to prevent external code from being concerned with the internal workings of an object
+and present a consistent interface independent of its internal implementation. This allows for better maintainability
+and reusability of code, there are other benefits, such as hiding implementation details, modularity, flexibility, 
+maintainability, and restricting direct access, this approach enhances the security of the data and helps protect 
+the object from unwanted access by clients, which is particularly important in complex projects 
+where changes can have far-reaching consequences. Here is an example of encapsulation:
+public class Reference
+{
+    private string _book; // Private field to store the name of the book
+    private int _chapter; // Private field to store the chapter number
+    private int _verse; // Private field to store the starting verse number
+    private int _endVerse; // Private field to store the ending verse number (if applicable)
+
+    // Constructor to initialize a new Reference object with a book, chapter, starting verse, and ending verse
+
+    ...
+
+    // Constructor to initialize a new Reference object with a book, chapter, and starting verse (no ending verse)
+
+    ...
+
+    // Method to get the display text of the reference (including book, chapter, and verse range if applicable)
+    public string GetDisplayText()
+    {
+        if (_endVerse == 0)
+        {
+            return $"{_book} {_chapter}:{_verse}";
+        }
+        else
+        {
+            return $"{_book} {_chapter}:{_verse}-{_endVerse}";
+        }
+    }
+
+    // Getter methods to retrieve the book, chapter, starting verse, and ending verse
+    public string GetBook()
+    {
+        return _book;
+    }
+
+    public int GetChapter()
+    {
+        return _chapter;
+    }
+
+    public int GetVerse()
+    {
+        return _verse;
+    }
+
+    public int GetEndVerse()
+    {
+        return _endVerse;
+    }
+
+    // Setter methods to set the ending verse, starting verse, chapter, and book
+    public void SetEndVerse(int endVerse)
+    {
+        _endVerse = endVerse;
+    }
+
+    public void SetVerse(int verse)
+    {
+        _verse = verse;
+    }
+
+    public void SetChapter(int chapter)
+    {
+        _chapter = chapter;
+    }
+
+
+    public void SetBook(string book)
+    {
+        _book = book;
+    }
+}
+
+This code snippet represents a class named Reference that encapsulates information about a reference to a book, chapter, 
+and verse range in a text. Here's a breakdown of the code:
+Private Fields: The class has private fields _book, _chapter, _verse, and _endVerse to store the name of the book, chapter number, 
+starting verse number, and ending verse number respectively, making it inaccessible to other classes.
+GetDisplayText() Method: This method returns a formatted string representing the display text of the reference. This method is
+public and can be accessed by other classes. It checks if an ending verse is specified and formats the output accordingly.
+Getter Methods: The class provides getter methods (GetBook(), GetChapter(), GetVerse(), GetEndVerse()) to retrieve the values of the private fields.
+Setter Methods: Setter methods (SetEndVerse(), SetVerse(), SetChapter(), SetBook()) are available to set the values of the private fields.
+This is a typical approach to encapsulation in the C# programming language. In C# we have other approaches to getters and setters. using the get and set
+beside the value of the private fields. Follow this example: private _book { get; set; }. This approach makes the code cleaner and easier to read.
+Encapsulation the best approach to create more robust and maintainable code, reducing the propagation of change
+through the system and allows for easier testing, and modularity. Additionally, encapsulation enables better separation of concerns, 
+making it easier to modify and adapt the code to new requirements.
+
+
