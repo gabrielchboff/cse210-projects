@@ -1,0 +1,60 @@
+Inheritance in computer science is a concept developed in Object-Oriented Programming (OOP).  This fundamental concept explains itself. It is considered a parent class with a base behavior and attributes that can be shared with its children. Think about this example: you have five classes with two common attributes and methodswith the same behavior, in a normal way you will write the same attributes and method to each class, that’s annoying,  imagine implementing this to one hundred classes. To solve this you can implement a parent class, or in other words, a base class that will have those common things, and these common things will be available to the other classes. The main benefits are code reusability, modularity and encapsulation, ease of maintenance, code organization, and readability and abstraction, however, the inheritance is a sword of two edges, if is added to much complexity to the classes with multiple parent classes doesn’t carry too much, this can destroy all the benefits. To understand better the concept follow the code below:
+
+using System;
+
+// Base class
+class Animal
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    // Constructor
+    public Animal(string name, int age)
+    {
+        Name = name;
+        Age = age;
+    }
+
+    // Method
+    public void Eat()
+    {
+        Console.WriteLine($"{Name} is eating.");
+    }
+}
+
+// Derived class (subclass)
+class Dog : Animal
+{
+    public string Breed { get; set; }
+
+    // Constructor
+    public Dog(string name, int age, string breed) : base(name, age)
+    {
+        Breed = breed;
+    }
+
+    // Method
+    public void Bark()
+    {
+        Console.WriteLine($"{Name} is barking.");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Creating an instance of the derived class
+        Dog myDog = new Dog("Buddy", 3, "Labrador");
+
+        // Accessing properties and methods from the base class
+        Console.WriteLine($"Name: {myDog.Name}, Age: {myDog.Age}, Breed: {myDog.Breed}");
+        myDog.Eat(); // Inherited method
+        myDog.Bark(); // Method specific to Dog class
+    }
+}
+
+Inheritance can be a incredible tool, with a good design and plan It is possible to achieve all the benefits. It is fundamental learn this concept
+
+
+
