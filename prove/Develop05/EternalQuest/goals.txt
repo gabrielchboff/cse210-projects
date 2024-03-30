@@ -1,0 +1,4 @@
+score, 40
+SimpleGoal, Test1, Testing if a simple goa is correct, 20, True
+EternalGoal, Eternal Stuff, Doing something eternal, 20
+CheckListGoal, Read, Read the scriptures every day, 20, 20, 200, 1
