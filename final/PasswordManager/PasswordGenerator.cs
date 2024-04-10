@@ -1,26 +1,28 @@
+using System.Text;
+
 namespace PasswordManager
 {
     public class PasswordGenerator
     {
-        private bool _upper = false;
-        private bool _number = false;
-        private bool _specialChar = false;
-
         public PasswordGenerator ()
         {
 
         }
+        
 
-        public PasswordGenerator (bool upper, bool number, bool specialChar)
+        public string Generate (int length)
         {
-            _upper = upper;
-            _number = number;
-            _specialChar = specialChar;
-        }
+            const string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-_=+";
+            StringBuilder sb = new StringBuilder();
+            Random random = new Random();
 
-        public string Generate ()
-        {
-            return "";
+            for (int i = 0; i < length; i++)
+            {
+                int index = random.Next(validChars.Length);
+                sb.Append(validChars[index]);
+            }
+            return sb.ToString();
+
         }
         
     }

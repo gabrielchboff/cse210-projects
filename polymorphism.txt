@@ -1,0 +1,67 @@
+Polymorphism is a programming concept that allows a class to have multiple implementations. In the
+work morphology, polymorphism is used to describe the properties of different forms, 
+The term "polymorphism" comes from the Greek roots "poly" meaning "many" and "morph" meaning "form" or "shape".
+In object-oriented programming, polymorphism refers to the ability of 
+objects to take on multiple forms or to be treated as instances of their parent class or interface.
+It is like a blank paper that can be folded into many different shapes, something like a origami.
+In C#, there are two types of polymorphism: compile-time polymorphism and runtime polymorphism
+Compile-time polymorphism is finished thru approach overloading and operator overloading, wherein the approach names are the identical but have extraordinary parameters. This is also referred to as static binding or early binding, as the decision of which approach to call is made at collect time.
+Runtime polymorphism is achieved via technique overriding, which is also known as dynamic binding or overdue binding.
+In this situation, the method call and approach signature (quantity of parameters and parameter type) ought to be the same, 
+and the choice of which method to name is made at runtime.
+One advantage of polymorphism is that it allows programmers to reuse code and classes as they are written, tested, and deployed. This reuse results in efficient and maintainable code.
+One use of polymorphism in C# is to create a program that handles concepts. For example, the Shape class can define an area() method, and derived classes like Rectangle can use this method through their own specific implementation. This allows the application to handle multiple templates through the same interface
+Here is a code example demonstrating polymorphism in C#:
+using System;
+
+namespace PolymorphismExample
+{
+    public abstract class Shape
+    {
+        public abstract double Area();
+    }
+
+    public class Rectangle : Shape
+    {
+        public double Length { get; set; }
+        public double Width { get; set; }
+
+        public override double Area()
+        {
+            return Length * Width;
+        }
+    }
+
+    public class Circle : Shape
+    {
+        public double Radius { get; set; }
+
+        public override double Area()
+        {
+            return Math.PI * Radius * Radius;
+        }
+    }
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Shape shape1 = new Rectangle { Length = 10, Width = 5 };
+            Shape shape2 = new Circle { Radius = 3 };
+
+            Console.WriteLine("Rectangle area: " + shape1.Area());
+            Console.WriteLine("Circle area: " + shape2.Area());
+        }
+    }
+}
+
+
+In this example, the Shape class is an abstract class that defines the Area() method. 
+The Rectangle and Circle classes inherit from Shape and use the Area() method with its specific implementation. 
+The Program class creates instances of Rectangle and Circle, assigns the Shape variable, 
+and calls the Area() method on each instance.
+Polymorphism, a key concept in product design, empowers developers to create flexible, reusable, and extensible code.
+Polymorphism promotes code quality, maintainability, and scalability by allowing classes to be processed through a 
+common interface. Its ability to use multiple methods with the same name increases the modularity and adaptability 
+of software systems. The recognition of polymorphism not only facilitates rule management but also enhances a robust
+and versatile programming approach, which is essential for sophisticated and dynamic implementation.

@@ -11,8 +11,6 @@ namespace PasswordManager
             _pass = pass;
         }
 
-        
-
         public string GetUser()
         {
             return _user;
